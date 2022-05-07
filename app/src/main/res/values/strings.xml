@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Base Datos Menu Completo</string>
+    <string name="action_settings">Settings</string>
+    <string name="hello_world">Manejo BBDD</string>
+    <string name="nom">N:</string>
+    <string name="tel">T:</string>
+    <string name="mail">M@:</string>
+    <string name="ins">Ins</string>
+    <string name="act">Act</string>
+    <string name="elim">Elim</string>
+    <string name="constodos">Cons. todos</string>
+    <string name="cons1">Cons. 1</string>
+
+</resources>
