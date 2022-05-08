@@ -9,6 +9,10 @@ android {
         targetSdkVersion 30
     }
 
+    dependencies {
+        implementation 'androidx.recyclerview:recyclerview:1.2.1'
+    }
+    
     buildTypes {
         release {
             minifyEnabled false
