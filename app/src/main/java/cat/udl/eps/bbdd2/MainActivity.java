@@ -1,13 +1,12 @@
 package cat.udl.eps.bbdd2;
 
+import android.annotation.SuppressLint;
 import android.os.Bundle;
 import android.app.Activity;
 import android.content.ContentValues;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.view.Menu;
-import android.view.View;
-import android.view.View.OnClickListener;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
@@ -93,7 +92,7 @@ public class MainActivity extends Activity {
 		
 		btnConsultar.setOnClickListener(v -> {
 			//Alternativa 1: metodo rawQuery()
-			Cursor c = db.rawQuery("SELECT nombre, telefono, email FROM Usuarios", null);
+			@SuppressLint("Recycle") Cursor c = db.rawQuery("SELECT nombre, telefono, email FROM Usuarios", null);
 
 			//Alternativa 2: metodo query()
 			//String[] campos = new String[] {"nombre", "telefono", "email"};
@@ -118,7 +117,7 @@ public class MainActivity extends Activity {
 			String[] campos = new String[]{"telefono", "email"};
 			String nom = txtNombre.getText().toString();
 			String[] args = new String[]{nom};
-			Cursor c = db.query("Usuarios", campos, "nombre=?", args, null, null, null);
+			@SuppressLint("Recycle") Cursor c = db.query("Usuarios", campos, "nombre=?", args, null, null, null);
 
 			txtResultado.setText("");
 
