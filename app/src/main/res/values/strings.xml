@@ -16,4 +16,5 @@
     <string name="correctIn">Registro insertado correctamente ! - </string>
     <string name="correctEl">Registro eliminado correctamente ! - </string>
     <string name="correctAct">Registro actualizado correctamente ! - </string>
+    <string name="errIn">La operacion de insercion ha fallado</string>
 </resources>

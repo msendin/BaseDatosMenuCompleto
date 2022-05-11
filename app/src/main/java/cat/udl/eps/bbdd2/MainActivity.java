@@ -14,19 +14,12 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 public class MainActivity extends Activity {
-	
-	private EditText txtCodigo;
+
 	private EditText txtNombre;
 	private EditText txtTel;
 	private EditText txtMail;
 	private TextView txtResultado;
-	
-	private Button btnInsertar;
-	private Button btnActualizar;
-	private Button btnEliminar;
-	private Button btnConsultar;
-	private Button btnCons1;
-	
+
 	private SQLiteDatabase db;
 
 	@Override
@@ -39,12 +32,12 @@ public class MainActivity extends Activity {
 		txtTel = findViewById(R.id.txtTel);
 		txtMail = findViewById(R.id.txtMail);
 		txtResultado = findViewById(R.id.txtResultado);
-		
-		btnInsertar = findViewById(R.id.btnInsertar);
-		btnActualizar = findViewById(R.id.btnActualizar);
-		btnEliminar = findViewById(R.id.btnEliminar);
-		btnConsultar = findViewById(R.id.btnConsultar);
-		btnCons1 = findViewById(R.id.btnConsultar1);
+
+		Button btnInsertar = findViewById(R.id.btnInsertar);
+		Button btnActualizar = findViewById(R.id.btnActualizar);
+		Button btnEliminar = findViewById(R.id.btnEliminar);
+		Button btnConsultar = findViewById(R.id.btnConsultar);
+		Button btnCons1 = findViewById(R.id.btnConsultar1);
 		
 		//Abrimos la base de datos 'DBUsuarios' en modo escritura
         UsuariosSQLiteHelper usdbh =
@@ -65,9 +58,9 @@ public class MainActivity extends Activity {
 				nuevoRegistro.put("telefono", tel);
 				nuevoRegistro.put("email", mail);
 				if (db.insert("Usuarios", null, nuevoRegistro) > 0)
-					showToast("Registro insertado correctamente !");
+					showToast(getString(R.string.correctIn));
 				else
-					showToast("La operacion de insercion ha fallado");
+					showToast(getString(R.string.errIn));
 			}
 		});
 		
@@ -86,9 +79,9 @@ public class MainActivity extends Activity {
 				valores.put("email", mail);
 				int cont = db.update("Usuarios", valores, "nombre=?", args);
 				if (cont > 0)
-					showToast("Registro actualizado correctamente ! - " + Integer.toString(cont));
+					showToast(getString(R.string.correctAct)  + Integer.toString(cont));
 				else
-					showToast("No hay ningun registro con este nombre");
+					showToast(getString(R.string.noReg));
 			}
 		});
 		
@@ -100,9 +93,9 @@ public class MainActivity extends Activity {
 				String[] args = new String[]{nom};				
 				int cont = db.delete("Usuarios", "nombre=?", args);
 				if (cont > 0)
-					showToast("Registro eliminado correctamente ! - " + Integer.toString(cont));
+					showToast(getString(R.string.correctEl) + Integer.toString(cont));
 				else
-					showToast("No hay ningun registro con este nombre");					
+					showToast(getString(R.string.noReg));
 			}
 		});
 		
@@ -129,7 +122,7 @@ public class MainActivity extends Activity {
 				     } while(c.moveToNext());
 				}
 				else 
-					txtResultado.setText("Tabla vacia");
+					txtResultado.setText(R.string.tablaV);
 				
 			}
 		});
@@ -156,7 +149,7 @@ public class MainActivity extends Activity {
 						txtResultado.append(" " + tel + " - " + mail + "\n");
 					} while (c.moveToNext());
 				} else
-					txtResultado.setText("No hay ningun registro con este nombre");
+					txtResultado.setText(R.string.noReg);
 			}
 
 		});
