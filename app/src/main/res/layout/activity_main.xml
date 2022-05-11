@@ -27,10 +27,9 @@
             android:layout_height="wrap_content"
             android:layout_weight="3"
             android:ems="10" 
-            android:inputType="text" />"
+            android:inputType="text" />
+        <requestFocus />
 
-            <requestFocus />       
-        
         <TextView
             android:id="@+id/textView2"
             android:layout_width="wrap_content"
@@ -43,10 +42,10 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:ems="10" 
-            android:inputType="number" /> "
+            android:inputType="number" />
         
         <TextView
-            android:id="@+id/textView2"
+            android:id="@+id/textView3"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/mail" />
@@ -70,31 +69,36 @@
             android:id="@+id/btnInsertar"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/ins" />
+            android:text="@string/ins"
+            style="?android:attr/buttonBarButtonStyle" />
 
         <Button
             android:id="@+id/btnActualizar"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/act" />
+            android:text="@string/act"
+            style="?android:attr/buttonBarButtonStyle" />
 
         <Button
             android:id="@+id/btnEliminar"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/elim" />
+            android:text="@string/elim"
+            style="?android:attr/buttonBarButtonStyle" />
 
         <Button
             android:id="@+id/btnConsultar"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/constodos" />
+            android:text="@string/constodos"
+            style="?android:attr/buttonBarButtonStyle" />
         
         <Button
             android:id="@+id/btnConsultar1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/cons1" />
+            android:text="@string/cons1"
+            style="?android:attr/buttonBarButtonStyle" />
 
     </LinearLayout>
 

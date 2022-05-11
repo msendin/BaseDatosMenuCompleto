@@ -13,8 +13,8 @@
     <string name="cons1">Cons. 1</string>
     <string name="tablaV">Tabla vacia</string>
     <string name="noReg">No hay ningun registro con este nombre</string>
-    <string name="correctIn">Registro insertado correctamente ! - </string>
-    <string name="correctEl">Registro eliminado correctamente ! - </string>
-    <string name="correctAct">Registro actualizado correctamente ! - </string>
+    <string name="correctIn">Registro insertado correctamente !  </string>
+    <string name="correctEl">Registro eliminado correctamente !  </string>
+    <string name="correctAct">Registro actualizado correctamente !  </string>
     <string name="errIn">La operacion de insercion ha fallado</string>
 </resources>
